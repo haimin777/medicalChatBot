@@ -20,6 +20,8 @@ slots:
     type: text
   address:
     type: unfeaturized
+  color:
+    type: text
 
 actions:
 - utter_greet
@@ -30,6 +32,8 @@ actions:
 - utter_how_can_i_help
 - utter_ask_location
 - action_facility_search
+- utter_ask_color
+
 
 responses:
   utter_greet:
@@ -55,3 +59,11 @@ responses:
   utter_ask_location:
   - text: "Can you provide your location please?"
   - text: "To find the nearest {facility_type} I need your address."
+
+  utter_ask_color:
+  - text: "what color would you like?"
+    buttons:
+    - title: "blue"
+      payload: '/choose{"color": "blue"}'
+    - title: "red"
+      payload: '/choose{"color": "red"}'

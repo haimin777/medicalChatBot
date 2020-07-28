@@ -1,6 +1,6 @@
 ## hospital search happy path
 * greet
-  - utter_how_can_i_help
+  - utter_ask_color
 * search_provider{"facility_type":"hospital", "location": "San Francisco"}
   - action_facility_search
   - slot{"address":"300 Hyde St, San Francisco"}
@@ -9,7 +9,7 @@
 
 ## hospital search + location
 * greet
-  - utter_how_can_i_help
+  - utter_ask_color
 * search_provider{"facility_type":"hospital"}
   - utter_ask_location
 * inform{"location":"San Francisco"}
